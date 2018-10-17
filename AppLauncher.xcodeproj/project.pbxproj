@@ -10,6 +10,12 @@
 		79439681217798F5004C1799 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79439680217798F5004C1799 /* AppDelegate.swift */; };
 		79439683217798F8004C1799 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79439682217798F8004C1799 /* Assets.xcassets */; };
 		79439686217798F8004C1799 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79439684217798F8004C1799 /* MainMenu.xib */; };
+		7943969621779AEE004C1799 /* DDHotKeyUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7943969021779AED004C1799 /* DDHotKeyUtilities.m */; };
+		7943969721779AEE004C1799 /* DDHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7943969221779AED004C1799 /* DDHotKeyCenter.m */; };
+		7943969821779AEE004C1799 /* DDHotKeyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7943969421779AEE004C1799 /* DDHotKeyTextField.m */; };
+		7943969B21779C93004C1799 /* SanityClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7943969A21779C93004C1799 /* SanityClass.m */; };
+		7943969E21779E41004C1799 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7943969D21779E41004C1799 /* Carbon.framework */; };
+		794396A02177B8AE004C1799 /* bash in Resources */ = {isa = PBXBuildFile; fileRef = 7943969F2177B8AE004C1799 /* bash */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,17 @@
 		79439685217798F8004C1799 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		79439687217798F8004C1799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79439688217798F8004C1799 /* AppLauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppLauncher.entitlements; sourceTree = "<group>"; };
+		7943968F21779AED004C1799 /* AppLauncher-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppLauncher-Bridging-Header.h"; sourceTree = "<group>"; };
+		7943969021779AED004C1799 /* DDHotKeyUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHotKeyUtilities.m; sourceTree = "<group>"; };
+		7943969121779AED004C1799 /* DDHotKeyTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHotKeyTextField.h; sourceTree = "<group>"; };
+		7943969221779AED004C1799 /* DDHotKeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHotKeyCenter.m; sourceTree = "<group>"; };
+		7943969321779AEE004C1799 /* DDHotKeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHotKeyCenter.h; sourceTree = "<group>"; };
+		7943969421779AEE004C1799 /* DDHotKeyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHotKeyTextField.m; sourceTree = "<group>"; };
+		7943969521779AEE004C1799 /* DDHotKeyUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHotKeyUtilities.h; sourceTree = "<group>"; };
+		7943969921779C93004C1799 /* SanityClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SanityClass.h; path = AppLauncher/SanityClass.h; sourceTree = SOURCE_ROOT; };
+		7943969A21779C93004C1799 /* SanityClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SanityClass.m; path = AppLauncher/SanityClass.m; sourceTree = SOURCE_ROOT; };
+		7943969D21779E41004C1799 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		7943969F2177B8AE004C1799 /* bash */ = {isa = PBXFileReference; lastKnownFileType = text; path = bash; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7943969E21779E41004C1799 /* Carbon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +55,7 @@
 			children = (
 				7943967F217798F5004C1799 /* AppLauncher */,
 				7943967E217798F5004C1799 /* Products */,
+				7943969C21779E41004C1799 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,13 +70,39 @@
 		7943967F217798F5004C1799 /* AppLauncher */ = {
 			isa = PBXGroup;
 			children = (
+				7943968E21779ABB004C1799 /* vendor */,
 				79439680217798F5004C1799 /* AppDelegate.swift */,
 				79439682217798F8004C1799 /* Assets.xcassets */,
 				79439684217798F8004C1799 /* MainMenu.xib */,
 				79439687217798F8004C1799 /* Info.plist */,
 				79439688217798F8004C1799 /* AppLauncher.entitlements */,
+				7943969F2177B8AE004C1799 /* bash */,
 			);
 			path = AppLauncher;
+			sourceTree = "<group>";
+		};
+		7943968E21779ABB004C1799 /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				7943969321779AEE004C1799 /* DDHotKeyCenter.h */,
+				7943969221779AED004C1799 /* DDHotKeyCenter.m */,
+				7943969121779AED004C1799 /* DDHotKeyTextField.h */,
+				7943969421779AEE004C1799 /* DDHotKeyTextField.m */,
+				7943969521779AEE004C1799 /* DDHotKeyUtilities.h */,
+				7943969021779AED004C1799 /* DDHotKeyUtilities.m */,
+				7943968F21779AED004C1799 /* AppLauncher-Bridging-Header.h */,
+				7943969921779C93004C1799 /* SanityClass.h */,
+				7943969A21779C93004C1799 /* SanityClass.m */,
+			);
+			path = vendor;
+			sourceTree = "<group>";
+		};
+		7943969C21779E41004C1799 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7943969D21779E41004C1799 /* Carbon.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -92,6 +137,12 @@
 				TargetAttributes = {
 					7943967C217798F4004C1799 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -118,6 +169,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				794396A02177B8AE004C1799 /* bash in Resources */,
 				79439683217798F8004C1799 /* Assets.xcassets in Resources */,
 				79439686217798F8004C1799 /* MainMenu.xib in Resources */,
 			);
@@ -130,7 +182,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7943969B21779C93004C1799 /* SanityClass.m in Sources */,
+				7943969621779AEE004C1799 /* DDHotKeyUtilities.m in Sources */,
+				7943969721779AEE004C1799 /* DDHotKeyCenter.m in Sources */,
 				79439681217798F5004C1799 /* AppDelegate.swift in Sources */,
+				7943969821779AEE004C1799 /* DDHotKeyTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,7 +255,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -254,7 +310,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -267,7 +323,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = AppLauncher/AppLauncher.entitlements;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B3W946AZD7;
@@ -278,6 +334,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.moscichowski.AppLauncher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppLauncher/vendor/AppLauncher-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -286,7 +344,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = AppLauncher/AppLauncher.entitlements;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B3W946AZD7;
@@ -297,6 +355,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.moscichowski.AppLauncher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppLauncher/vendor/AppLauncher-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;

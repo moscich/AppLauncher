@@ -10,12 +10,20 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
+    let proxy = SanityClass()
     @IBOutlet weak var window: NSWindow!
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        proxy.registerMe {
+            let apps = NSRunningApplication.runningApplications(withBundleIdentifier: "com.jetbrains.intellij.ce")
+            apps.first?.activate(options: .activateIgnoringOtherApps)
+        }
+        
+//        DDHotKey *key = [DDHotKey hotKeyWithKeyCode:kVK_ANSI_P modifierFlags:NSCommandKeyMask | NSControlKeyMask task:^(NSEvent *event) {
+//            [self tesawft:self.statusItem.button];
+//            }];
+//        [[DDHotKeyCenter sharedHotKeyCenter] registerHotKey:key];
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
