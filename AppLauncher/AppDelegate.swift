@@ -17,7 +17,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         proxy.registerMe {
             let apps = NSRunningApplication.runningApplications(withBundleIdentifier: "com.jetbrains.intellij.ce")
-            apps.first?.activate(options: .activateIgnoringOtherApps)
+            if let app = apps.first {
+                app.activate(options: .activateIgnoringOtherApps)
+            } else {
+                NSWorkspace.shared.launchApplication("/Applications/IntelliJ IDEA CE.app")
+            }
+            
+//            [[NSWorkspace sharedWorkspace] launchApplication:@"/Applications/Safari.app"];
         }
         
 //        DDHotKey *key = [DDHotKey hotKeyWithKeyCode:kVK_ANSI_P modifierFlags:NSCommandKeyMask | NSControlKeyMask task:^(NSEvent *event) {
