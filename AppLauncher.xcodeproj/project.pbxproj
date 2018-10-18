@@ -72,6 +72,8 @@
 			children = (
 				7943968E21779ABB004C1799 /* vendor */,
 				79439680217798F5004C1799 /* AppDelegate.swift */,
+				7943969921779C93004C1799 /* SanityClass.h */,
+				7943969A21779C93004C1799 /* SanityClass.m */,
 				79439682217798F8004C1799 /* Assets.xcassets */,
 				79439684217798F8004C1799 /* MainMenu.xib */,
 				79439687217798F8004C1799 /* Info.plist */,
@@ -91,8 +93,6 @@
 				7943969521779AEE004C1799 /* DDHotKeyUtilities.h */,
 				7943969021779AED004C1799 /* DDHotKeyUtilities.m */,
 				7943968F21779AED004C1799 /* AppLauncher-Bridging-Header.h */,
-				7943969921779C93004C1799 /* SanityClass.h */,
-				7943969A21779C93004C1799 /* SanityClass.m */,
 			);
 			path = vendor;
 			sourceTree = "<group>";

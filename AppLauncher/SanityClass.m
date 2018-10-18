@@ -12,11 +12,11 @@
 
 @implementation SanityClass
 
-- (void) registerMe:(void (^)(void))blockName {
-    DDHotKey *key = [DDHotKey hotKeyWithKeyCode:kVK_ANSI_P modifierFlags:NSCommandKeyMask | NSControlKeyMask task:^(NSEvent *event) {
+- (void) registerMe: (int)key block:(void (^)(void))blockName {
+    DDHotKey *hotKey = [DDHotKey hotKeyWithKeyCode:key modifierFlags:NSCommandKeyMask | NSControlKeyMask | NSAlternateKeyMask | NSShiftKeyMask task:^(NSEvent *event) {
         blockName();
     }];
-    [[DDHotKeyCenter sharedHotKeyCenter] registerHotKey:key];
+    [[DDHotKeyCenter sharedHotKeyCenter] registerHotKey:hotKey];
 }
 
 @end

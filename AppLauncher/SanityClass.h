@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SanityClass : NSObject
 
-- (void) registerMe:(void (^)(void))blockName;
+- (void) registerMe: (int)key block:(void (^)(void))blockName;
 
 @end
 
